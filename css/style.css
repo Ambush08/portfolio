@@ -27,13 +27,22 @@ section {
     width: 100%;
 }
 
+li{
+    list-style-type: none;
+}
+
 a {
     text-decoration: none;
     color: inherit;
 }
 
+h2{
+    font-size: 1.5rem;
+}
+
 p {
     color: var(--gray);
+    font-size: 1rem;
 }
 
 /* ========== BUTTONS ========== */
@@ -62,13 +71,61 @@ button {
 
 .btn_primary:hover,
 .btn.primary.large:hover {
-    background: var(--secondary);
+    background: #fff;
+    color: var(--primary);
+    border: 2px solid var(--primary);
 }
 
 .btn_secondary:hover {
     background: var(--primary);
     color: #fff;
 }
+
+
+
+                       /* NAV BAR*/
+header{
+    width: 100%;
+    background: var(--primary);
+    color: #fff;
+}
+
+.container{
+    max-width: 65%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+}
+
+.logo{
+    font-size: 1.5rem;
+}
+
+.nav-bar{
+    width: 50%;
+}
+
+.nav-list{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.nav-list li{
+    margin-right: 15px;
+    font-size: 1.2rem;
+}
+
+.nav-list li a:hover{
+    color: black;
+}
+
+.current{
+    border-bottom: 2px solid #fff;
+}
+
 
 /* ========== HOME SECTION ========== */
 .home {
@@ -111,15 +168,14 @@ button {
 }
 
 .icons{
-    display: flex;
-    align-items: center;
-    justify-content: start;
-    max-width: 75%;
+    display: block;
+    width: 75%;
+    margin: 0 auto;
 }
 
 .icons a {
-    font-size: 15px;
-    margin-right: 5px;
+    font-size: 20px;
+    margin-right: 10px;
     color: var(--primary);
     transition: 0.3s;
 }
@@ -129,8 +185,9 @@ button {
 }
 
 .home_content.img img {
-    width: 100%;
-
+    width: 300px;
+    background-image: url(images/person.jpg);
+    border-radius: 50%;
 }
 
 /* ========== ABOUT ========== */
@@ -140,9 +197,6 @@ button {
 }
 
 .about_content {
-    display: grid;
-    grid-template-columns: 2fr 1fr;
-    gap: 40px;
     max-width: 75%;
     margin: 0 auto;
 }
@@ -188,6 +242,14 @@ button {
 }
 
 /* ========== PROJECTS ========== */
+.project{
+    width: 100%;
+}
+
+.projects_content{
+    max-width: 75%;
+    margin: 0 auto;
+}
 .projects_content.title {
     text-align: center;
     margin-bottom: 40px;
@@ -223,12 +285,31 @@ button {
 /* ========== SERVICES ========== */
 .services {
     background: #f8fafc;
+    width: 100%;
 }
 
-.services_content.showcase {
+.services_content{
+    max-width: 75%;
+    margin: 0 auto;
+}
+
+.services_header h2{
+    text-align: center;
+    margin-bottom: 10px;
+    font-size: 1.5rem;
+}
+
+.services_header p{
+    text-align: center;
+    margin-bottom: 15px;
+    font-size: 1rem;
+}
+
+.services_showcase {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: 20px;
+    max-width: 100%;
 }
 
 .services .showcase {
@@ -247,19 +328,31 @@ button {
 /* ========== TESTIMONIALS ========== */
 .testimonies {
     background: #f1f5f9;
+    width: 100%;
 }
 
-.testimonies_content.showcase {
-    display: flex;
-    justify-content: center;
+.testimonies_content{
+    max-width: 75%;
+    margin: 0 auto;
+}
+
+.testimonie_content{
+    text-align: center;
+    margin-bottom: 10px;
+    font-size: 1.2rem;
+}
+
+.testimonie_content{
+    margin-bottom: 10px;
 }
 
 .showcases {
     background: var(--card);
     padding: 30px;
     border-radius: 12px;
-    max-width: 600px;
+    width: 90%;
     display: flex;
+    align-items: center;
     gap: 20px;
     box-shadow: 0 10px 30px rgba(0,0,0,0.08);
 }
@@ -269,6 +362,7 @@ button {
     height: 80px;
     border-radius: 50%;
     background: #e5e7eb;
+    border: 1px solid var(--primary);
 }
 
 .showcase2 h5 {
@@ -279,20 +373,72 @@ button {
 /* ========== CONTACT ========== */
 .contacts {
     background: #ffffff;
+    width: 100%;
 }
 
-.contacts_content.info ul {
+.contacts_header{
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.contacts_container{
+    max-width: 75%;
+    margin: 0 auto;
+}
+
+.contacts_contents{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 100%;
+}
+
+.contacts_info{
+    width: 50%;
+}
+
+.contacts_info ul {
     list-style: none;
     margin: 30px 0;
 }
 
-.contacts_content.info li {
+.contacts_info li {
     margin-bottom: 15px;
 }
 
-.contacts_content.info i {
+.contacts_info i {
     margin-right: 10px;
     color: var(--primary);
+}
+
+.contacts_form{
+    width: 50%;
+    
+}
+
+.contacts_form{
+    text-align: start;
+    font-size: 1rem;
+}
+
+.form_input{
+    width: 100%;
+    padding: 5px 0;
+}
+
+.form_input .inputs{
+    width: 100%;
+    border: 1px solid black;
+    padding: 15px;
+}
+
+.form_input .inputs:on-focus{
+    border: 0;
+}
+
+input_form .input_text{
+    width: 100%;
+    padding: 10px;
 }
 
 /* ========== RESPONSIVE ========== */

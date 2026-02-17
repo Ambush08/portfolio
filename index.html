@@ -10,11 +10,13 @@
 <body>
 <header>
     <div class="container">
-        <div class="logo"></div>
+        <div class="logo">
+            <h1>Warren <span class="logo-text">Ambuga</span></h1>
+        </div>
         <nav class="nav-bar">
             <ul class="nav-list">
                 <li>
-                    <a href="index.html">Home</a>
+                    <a href="index.html"><span class="current">Home</span></a>
                 </li>
                 <li>
                     <a href="about.html">About Me</a>
@@ -36,7 +38,7 @@
               <!--HOME CONTENT-->
     <section class="home">
         <div class="home_content">
-            <div class="header">
+            <div class="home_title">
                 <div class="title">
                     <h1>
                         Hello, I'm Warren Ambuga
@@ -61,6 +63,9 @@
                         </a>
                          <a href="https://www.linkedin.com/in/warren-ambuga-0718693a3/">
                              <i class="fa-brands fa-linkedin"></i>
+                        </a>
+                         <a href="https://x.com/cloutchaser08">
+                            <i class="fa-brands fa-x-twitter"></i>
                         </a>
                     </div>
                 </div>
@@ -167,11 +172,11 @@
                      <!--MY SERVICES-->
     <section class="services">
         <div class="services_content">
-            <div class="section_content header">
+            <div class="services_header">
                 <h2>My Services</h2>
                 <p>I offer a range of web development services.</p>
             </div>
-            <div class="services_content showcase">
+            <div class="services_showcase">
                 <div class="showcase">
                      
                     <h5>Custom Websites</h5>
@@ -183,10 +188,6 @@
                 <div class="showcase">
                      
                     <h5>Back-End Development</h5>
-                </div>
-                <div class="showcase">
-                     
-                    <h5>Responsive Design</h5>
                 </div>
                 <div class="showcase">
                      
@@ -205,29 +206,31 @@
         <div class="testimonies_content">
             <div class="testimonie_content title">
                 <h2>Client Testimonials</h2>
+                <p>This is what one of my Clienthas to sya about me. I do value client feedback.</p>
             </div>
-        </div>
-        <div class="testimonies_content showcase">
+
             <div class="showcases">
                 <div class="showcase1">
                     <img src=""/>
                 </div>
                 <div class="showcase2">
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque minima cupiditate eveniet.</p>
+                    <p>"Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque minima cupiditate eveniet. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum, earum!".</p>
                     <h5>John Doe</h5>
                 </div>
             </div>
         </div>
+        
     </section>
 
                        <!--CONTACTS-->
     <section class="contacts">
-        <div class="contacts_content">
-            <div class="contacts_content header">
+        <div class="contacts_container">
+            <div class="contacts_header">
                 <h2>Let's Connect</h2>
                 <p>Have a project? I'd love to hear from you. Let's bring your ideas to life together.</p>
             </div>
-            <div class="contacts_content info">
+           <div class="contacts_contents">
+             <div class="contacts_info">
                 <ul class="list">
                     <li>
                         <a href="#">
@@ -249,6 +252,25 @@
                     <a href="#">Get in Touch</a>
                 </button>
             </div>
+
+            <div class="contacts_form">
+                <p>Send Us an Email.</p>
+                <form action="" class="form">
+                   <div class="form_input">
+                      <input type="text" value="name" placeholder="Enter your name." class="inputs">
+                   </div>
+                   <div class="form_input">
+                      <input type="email" value="email" placeholder="Enter your email." class="inputs">
+                   </div>
+                   <div class="form_input">
+                    <textarea class="inputs" name="text" id=""></textarea>
+                   </div>
+                </form>
+                 <button class="btn primary large">
+                    <a href="#">Submit</a>
+                </button>
+            </div>
+           </div>
         </div>
     </section>
 </body>
